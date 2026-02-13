@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+{% set hearts = true %}
+
+{% block content %}
+
+<style>
+    .chapter-top-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 0;
+        margin-bottom: 20px;
+        z-index: 10;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .top-nav-btn {
+        margin-left: 10px;
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 8px 18px;
+        border-radius: 22px;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .top-nav-btn:hover {
+        background: #fff0f4;
+    }
+
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 35px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+</style>
+
+<!-- Sticky Previous -->
+<div class="chapter-top-nav">
+    <a href="{{ url_for('chapter_num', num=2) }}" class="top-nav-btn">← Previous Chapter</a>
+</div>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">CHAPTER 3 – PART I</h2>
+    <div class="chapter-subtitle">Love That Was Already There</div>
+
+    <div class="story-text">
+
+        <p>Sahana never thought she lacked love.</p>
+
+        <p>It existed around her — quietly, steadily — without demanding attention.</p>
+
+        <p>At home, her aunt cared for her in ways that didn’t need explanation. She noticed when Sahana
+        skipped meals, when she returned home unusually silent, when her tiredness felt heavier than
+        usual. She defended her without being asked and worried about her without making it obvious.</p>
+
+        <p>Sometimes, she loved Sahana more fiercely than her own daughter.</p>
+
+        <p>Sahana accepted that love easily — almost too easily.</p>
+
+        <p>It was constant.</p>
+        <p>Reliable.</p>
+        <p>Always there.</p>
+
+        <p>And because of that, she never questioned it.</p>
+
+        <p>Then there was a close friend she had connected with during college — someone she mostly
+        spoke to online. They hadn’t spent much time together in person, but he understood her in a
+        quiet, uncomplicated way.</p>
+
+        <p>When Sahana felt overwhelmed, he stayed.</p>
+
+        <p>When she struggled to explain her emotions, he waited patiently.</p>
+
+        <p>He didn’t rush her to feel better.</p>
+
+        <p>He didn’t dismiss what she felt.</p>
+
+        <p>He simply listened.</p>
+
+        <p>On nights when her thoughts felt too heavy, she typed messages slowly, unsure how to explain
+        herself. He read every word carefully and replied with reassurance that felt calm, not intrusive.</p>
+
+        <p>This was love too — steady, respectful, and supportive.</p>
+
+        <p>Her boyfriend supported her differently.</p>
+
+        <p>He believed in her academic abilities when she doubted herself. He helped her break down
+        concepts, guided her through difficult topics, and reminded her that effort mattered more than
+        comparison.</p>
+
+        <p>He didn’t pressure her.</p>
+        <p>He didn’t belittle her confusion.</p>
+        <p>He stood beside her patiently.</p>
+
+        <p>Sahana never denied this love.</p>
+
+        <p>She just didn’t notice it the way she should have.</p>
+
+        <p>Because none of it disturbed her peace.</p>
+
+        <p>None of it made her anxious.</p>
+
+        <p>None of it made her overthink.</p>
+
+        <p>None of it made her question her worth.</p>
+
+        <p>And without realizing it, she began confusing calm with absence.</p>
+
+        <p>She didn’t yet understand that love doesn’t always announce itself loudly. Sometimes, it stays
+        so steady that it becomes invisible.</p>
+
+        <p>For now, she lived surrounded by care — unaware that she was already holding what she would
+        later search for elsewhere.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+        <hr style="margin:50px 0; border:none; border-top:1px solid #eee;">
+
+        <h2 class="chapter-title">CHAPTER 3 – PART II</h2>
+        <div class="chapter-subtitle">What She Started Looking For</div>
+
+        <p>Somewhere along the way, something in Sahana changed.</p>
+
+        <p>Not suddenly.</p>
+        <p>Not noticeably.</p>
+        <p>But quietly.</p>
+
+        <p>She was surrounded by people who cared for her, yet a small restlessness began to settle in her
+        heart. It wasn’t loneliness. It was something harder to explain — a feeling that something was
+        missing, even though nothing was gone.</p>
+
+        <p>The love she received felt steady. Safe. Predictable.</p>
+
+        <p>And slowly, without realizing it, she began wanting something else.</p>
+
+        <p>She started paying more attention to how people responded to her. Who noticed her first. Who
+        chose her without being asked. Who made her feel important in moments that weren’t planned.</p>
+
+        <p>She didn’t want attention.</p>
+        <p>She wanted meaning.</p>
+
+        <p>She wanted to feel chosen — not because she was always there, but because she mattered.</p>
+
+        <p>The problem was, she never said this out loud.</p>
+
+        <p>Instead, she waited.</p>
+
+        <p>She waited for people to notice her silence. To understand her moods. To read the things she
+        didn’t know how to explain.</p>
+
+        <p>When they didn’t, she told herself she was expecting too much.</p>
+
+        <p>So she adjusted again.</p>
+
+        <p>She gave more patience.</p>
+        <p>More understanding.</p>
+        <p>More space.</p>
+
+        <p>And with every adjustment, her expectations grew quieter — but heavier.</p>
+
+        <p>She began confusing calm love with distance. Support with indifference. Consistency with lack
+        of depth.</p>
+
+        <p>The people who stayed never made her anxious, and somehow, that made them fade into the
+        background of her emotional world.</p>
+
+        <p>What pulled her attention instead were moments that felt uncertain.</p>
+
+        <p>A delayed response.</p>
+        <p>An unclear reaction.</p>
+        <p>A neutral stand during conflict.</p>
+
+        <p>These moments stayed with her longer than they should have. They disturbed her peace. And
+        strangely, that disturbance made them feel important.</p>
+
+        <p>She didn’t recognize this pattern yet.</p>
+
+        <p>She only knew that she was thinking more. Questioning more. Feeling more unsettled than
+        before.</p>
+
+        <p>On the bus rides home, as the city lights passed by the window, she replayed conversations in
+        her mind. Not the warm ones — the confusing ones.</p>
+
+        <p>At night, she found herself wondering where she stood in people’s lives. Whether she was
+        important, or just convenient. Whether she was valued, or simply available.</p>
+
+        <p>She didn’t blame anyone for these thoughts.</p>
+
+        <p>She blamed herself.</p>
+
+        <p>Maybe she was too emotional.</p>
+        <p>Maybe she needed to expect less.</p>
+        <p>Maybe this was just how things were.</p>
+
+        <p>Still, the feeling didn’t leave.</p>
+
+        <p>Sahana was slowly learning something about herself — though she didn’t know it yet.</p>
+
+        <p>She was drawn to relationships that made her question her place, and overlooking the ones that
+        never made her doubt it.</p>
+
+        <p>This was the beginning of that shift.</p>
+
+        <p>The moment when love stopped being something she received — and became something she
+        started searching for.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=4) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+{% endblock %}

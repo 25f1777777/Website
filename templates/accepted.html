@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="success-view" style="text-align: center;">
+    <h1 style="font-size: 4rem; margin: 0;">💖</h1>
+    <h2 style="color: var(--pink-main); font-weight: 800;">I Knew Your Logic Was Sound!</h2>
+    
+    <div class="story-highlight" style="text-align: left; background: rgba(255, 255, 255, 0.5);">
+        <p style="margin: 0; font-style: italic;">
+            In a world where many things are taken lightly, finding someone who chooses sincerity, respect, and warmth feels rare — and I’m truly grateful that person is you.
+        </p>
+    </div>
+
+    <p style="margin-top: 20px; color: #666;">
+        “Not everything needs an audience — some moments are meant to be unlocked slowly, with a smile and a shared sense of closeness.”
+    </p>
+
+    <a href="{{ url_for('login') }}" class="btn">Open This With Care ✨</a>
+    
+   
+</div>
+{% endblock %}

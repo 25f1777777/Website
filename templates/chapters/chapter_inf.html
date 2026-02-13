@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% block content %}
+
+<canvas id="romanceCanvas"></canvas>
+
+
+
+<div class="romantic-bg">
+    <div class="hearts"></div>
+    <div class="balloons"></div>
+    <div class="roses"></div>
+</div>
+
+
+
+<style>
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 60px 40px;
+        border-radius: 20px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+        text-align: center;
+    }
+
+    .chapter-title {
+        color: #ff4d6d;
+        margin-bottom: 10px;
+    }
+
+    .chapter-subtitle {
+        color: #888;
+        margin-bottom: 50px;
+        font-weight: 500;
+    }
+
+    .love-text {
+        font-size: 1.25rem;
+        line-height: 2;
+        color: #444;
+        max-width: 520px;
+        margin: auto;
+    }
+
+    .soft-divider {
+        color: #ffb3c1;
+        font-size: 1.4rem;
+        margin: 50px 0;
+    }
+
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 10px 24px;
+        border-radius: 24px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+</style>
+
+<div class="chapter-card">
+
+    <h1 class="chapter-title"> All Chapters Done </h1>
+    <div class="chapter-subtitle">A Quiet Truth</div>
+
+    <div class="love-text">
+        Stories may have chapters,<br>
+        but the love I have for you<br>
+        has no limits.
+    </div>
+
+    <div class="soft-divider">✦ ✦ ✦</div>
+
+    <p style="color:#999; font-size:0.9rem;">
+        Not everything needs many words.
+    </p>
+
+</div>
+
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="secondary-btn">
+        ← Back to Sections
+    </a>
+</div>
+
+
+<div class="teddy-image-wrapper">
+    <img src="{{ url_for('static', filename='images/teddy_bear.png') }}"
+         alt="Teddy Bear"
+         class="romantic-teddy">
+</div>
+
+
+
+<script>
+const canvas = document.getElementById("romanceCanvas");
+const ctx = canvas.getContext("2d");
+
+let w, h;
+function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+/* ---------- PARTICLES ---------- */
+const particles = [];
+const types = ["heart", "balloon", "petal"];
+
+class Particle {
+    constructor() {
+        this.type = types[Math.floor(Math.random() * types.length)];
+        this.x = Math.random() * w;
+        this.y = h + Math.random() * h;
+        this.size = Math.random() * 12 + 8;
+        this.speed = Math.random() * 0.6 + 0.4;
+        this.drift = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.6 + 0.4;
+        this.rotation = Math.random() * Math.PI;
+    }
+
+    draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+
+        if (this.type === "heart") {
+            ctx.fillStyle = "#ff4d6d";
+            ctx.beginPath();
+            ctx.moveTo(0, -this.size / 2);
+            ctx.bezierCurveTo(
+                this.size, -this.size,
+                this.size * 1.5, this.size / 2,
+                0, this.size
+            );
+            ctx.bezierCurveTo(
+                -this.size * 1.5, this.size / 2,
+                -this.size, -this.size,
+                0, -this.size / 2
+            );
+            ctx.fill();
+        }
+
+        if (this.type === "balloon") {
+            ctx.fillStyle = "#ff6b81";
+            ctx.beginPath();
+            ctx.ellipse(0, 0, this.size * 0.7, this.size, 0, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        if (this.type === "petal") {
+            ctx.fillStyle = "#ffb3c1";
+            ctx.beginPath();
+            ctx.ellipse(0, 0, this.size, this.size / 2, 0, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        ctx.restore();
+    }
+
+    update() {
+        this.y -= this.speed;
+        this.x += this.drift;
+        this.rotation += 0.002;
+
+        if (this.y < -50) {
+            this.y = h + 50;
+            this.x = Math.random() * w;
+        }
+    }
+}
+
+/* ---------- INIT ---------- */
+for (let i = 0; i < 120; i++) {
+    particles.push(new Particle());
+}
+
+/* ---------- LOOP ---------- */
+function animate() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+
+
+
+{% endblock %}

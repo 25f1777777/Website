@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+{% set hearts = true %}
+
+{% block content %}
+
+<style>
+    .chapter-top-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 0;
+        margin-bottom: 20px;
+        z-index: 10;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .top-nav-btn {
+        margin-left: 10px;
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 8px 18px;
+        border-radius: 22px;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .top-nav-btn:hover {
+        background: #fff0f4;
+    }
+
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 35px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+</style>
+
+<!-- Sticky Previous -->
+<div class="chapter-top-nav">
+    <a href="{{ url_for('chapter_num', num=4) }}" class="top-nav-btn">← Previous Chapter</a>
+</div>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">CHAPTER 5 – PART I</h2>
+    <div class="chapter-subtitle">When Thoughts Became Louder</div>
+
+    <div class="story-text">
+
+        <p>Overthinking didn’t arrive suddenly in Sahana’s life.</p>
+
+        <p>It had always been there — quietly present — but now it began taking more space than before.</p>
+
+        <p>Small things stayed with her longer.</p>
+
+        <p>Moments replayed themselves again and again.</p>
+
+        <p>Silences felt heavier than words.</p>
+
+        <p>She found herself thinking about interactions long after they ended. A neutral reply felt
+        incomplete. A calm response felt distant. Her mind searched for meaning where none was
+        clearly offered.</p>
+
+        <p>And the more she thought, the more unsettled she felt.</p>
+
+        <p>What disturbed her the most was how easily her peace slipped away. Things that shouldn’t have
+        mattered this much began affecting her entire day. A small disappointment could follow her
+        from morning to night.</p>
+
+        <p>She tried to reason with herself.</p>
+
+        <p>She told herself she was being sensitive.</p>
+
+        <p>That she was expecting too much.</p>
+
+        <p>That people had different ways of caring.</p>
+
+        <p>But logic didn’t quiet her thoughts.</p>
+
+        <p>Her emotions didn’t respond to explanations.</p>
+
+        <p>She became more alert, more watchful. She noticed who replied late, who stayed neutral, who
+        didn’t step in when she expected them to. Each observation added another layer to her
+        thoughts.</p>
+
+        <p>Her mental space grew crowded.</p>
+
+        <p>At night, when everything around her slowed down, her mind stayed awake. Conversations
+        replayed themselves with different endings. She wondered what she could have said
+        differently. What she should have done less. What she expected without realizing it.</p>
+
+        <p>She didn’t want to be like this.</p>
+
+        <p>She missed the version of herself that felt lighter, the one who didn’t analyze every
+        interaction.</p>
+
+        <p>But the more she tried to stop thinking, the harder it became.</p>
+
+        <p>Overthinking didn’t just steal her sleep.</p>
+
+        <p>It stole her calm.</p>
+
+        <p>She began carrying emotional weight into places that once felt safe. Even ordinary days started
+        feeling tiring. Not because something went wrong — but because her mind never rested.</p>
+
+        <p>She didn’t know it yet, but this was the beginning of emotional exhaustion.</p>
+
+        <p>Not caused by one person.</p>
+
+        <p>Not caused by one incident.</p>
+
+        <p>But by expectations she never spoke about — and thoughts she never let go of.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+        <hr style="margin:50px 0; border:none; border-top:1px solid #eee;">
+
+        <h2 class="chapter-title">CHAPTER 5 – PART II</h2>
+        <div class="chapter-subtitle">Carrying Too Much</div>
+
+        <p>Sahana didn’t notice the exhaustion at first.</p>
+
+        <p>It didn’t come as tiredness in her body.</p>
+
+        <p>It came as heaviness in her mind.</p>
+
+        <p>She felt drained even on days when nothing particularly bad happened. Small interactions left
+        her unsettled. Ordinary conversations stayed with her longer than they should have.</p>
+
+        <p>She was tired of thinking — but she couldn’t stop.</p>
+
+        <p>Her emotions began spilling into everything. A small misunderstanding could ruin her mood
+        for hours. Silence felt louder than words. Neutral responses felt colder than they were meant
+        to be.</p>
+
+        <p>She cried more easily now.</p>
+
+        <p>Not loudly.</p>
+
+        <p>Not in front of anyone.</p>
+
+        <p>Quietly, in moments no one saw — on bus rides home, late at night, staring at the ceiling,
+        wondering why everything felt so heavy.</p>
+
+        <p>She started questioning herself more than ever.</p>
+
+        <p>Why am I like this?</p>
+
+        <p>Why do I expect so much?</p>
+
+        <p>Why does this affect me so deeply?</p>
+
+        <p>The questions didn’t bring answers.</p>
+
+        <p>They only brought guilt.</p>
+
+        <p>She felt guilty for wanting reassurance.</p>
+
+        <p>Guilty for feeling hurt when no one had promised her anything.</p>
+
+        <p>Guilty for not appreciating the love she already had.</p>
+
+        <p>That guilt sat beside her constantly.</p>
+
+        <p>People around her noticed something had changed.</p>
+
+        <p>Her aunt asked gentle questions.</p>
+
+        <p>Her best friend stayed online longer than usual.</p>
+
+        <p>Her boyfriend tried to reassure her, reminding her to rest.</p>
+
+        <p>Sahana smiled and said she was fine.</p>
+
+        <p>She always did.</p>
+
+        <p>But inside, she felt scattered.</p>
+
+        <p>She realized something unsettling — she was giving her emotional energy to situations that
+        disturbed her peace, while taking comfort from people who never unsettled it.</p>
+
+        <p>She was chasing clarity from places that only gave confusion.</p>
+
+        <p>And still, she held on.</p>
+
+        <p>She believed that if she tried a little harder, understood a little more, stayed patient a little
+        longer, things would settle. That her emotions would make sense eventually.</p>
+
+        <p>But instead of settling, they piled up.</p>
+
+        <p>One evening, after breaking down over something that shouldn’t have hurt so much, Sahana sat
+        quietly, exhausted.</p>
+
+        <p>And for the first time, she asked herself a different question.</p>
+
+        <p>Not why am I hurting?</p>
+
+        <p>But why am I hurting myself like this?</p>
+
+        <p>The question stayed.</p>
+
+        <p>It didn’t accuse anyone else.</p>
+
+        <p>It didn’t demand answers.</p>
+
+        <p>It simply waited.</p>
+
+        <p>Sahana didn’t know it yet, but this question was the beginning of change.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=6) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+{% endblock %}

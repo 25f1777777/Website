@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+{% set hearts = true %}
+
+{% block content %}
+
+<style>
+    /* ---------- Floating Previous Button ---------- */
+    .prev-floating {
+        position: fixed;
+        top: 25px;
+        left: 25px;
+        z-index: 1000;
+    }
+
+    .prev-floating a {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .prev-floating a:hover {
+        background: #fff0f4;
+    }
+
+    /* ---------- Chapter Styling ---------- */
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 35px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    /* ---------- Bottom Navigation ---------- */
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+
+    .chapter-top-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 0;
+    margin-bottom: 20px;
+    z-index: 10;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.top-nav-btn {
+    margin-left: 10px;
+    background: white;
+    color: #ff4d6d !important;
+    border: 1.5px solid #ff4d6d;
+    padding: 8px 18px;
+    border-radius: 22px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.top-nav-btn:hover {
+    background: #fff0f4;
+}
+
+
+</style>
+
+<div class="chapter-top-nav">
+    <a href="{{ url_for('chapter_num', num=1) }}" class="top-nav-btn">
+        ← Previous Chapter
+    </a>
+</div>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">CHAPTER 2 – PART I</h2>
+    <div class="chapter-subtitle">The Long Road Forward</div>
+
+    <div class="story-text">
+
+        <p>Nothing in Sahana’s life ever came easily — not because she lacked ability, but because her path
+        always seemed longer than others’.</p>
+
+        <p>When she applied for higher education and the first admission list was released, her name wasn’t
+        there.</p>
+
+        <p>She refreshed the page once.</p>
+        <p>Then again.</p>
+        <p>As if looking harder might change something.</p>
+        <p>It didn’t.</p>
+
+        <p>She stared at the screen for a few seconds longer than necessary, then placed her phone aside.</p>
+
+        <p>There were no tears, no dramatic reaction — just a quiet heaviness settling in her chest.</p>
+
+        <p>She told herself it was okay.</p>
+        <p>That this wasn’t the end.</p>
+        <p>That delays didn’t always mean denial.</p>
+
+        <p>In the second counseling, she finally secured a seat in engineering. The branch wasn’t what she
+        had imagined for herself, but the college was one she had quietly hoped for. That part mattered
+        more than she admitted.</p>
+
+        <p>She smiled — not out of excitement, but relief.</p>
+
+        <p>“This is still progress,” she thought.</p>
+
+        <p>Later, during the sliding round, her branch changed. It wasn’t a celebration, but it felt like hope
+        returning gently. She didn’t announce it loudly. She carried it quietly, the way she carried most
+        things.</p>
+
+        <p>College life began before sunrise.</p>
+
+        <p>She became a day scholar, traveling long hours every day. The bus rides were slow and crowded.
+        Mornings smelled of dust and early tea. Some days she listened to music. Some days she revised
+        notes. Some days she simply watched the sky change colors through the window.</p>
+
+        <p>That seat by the window became familiar.</p>
+
+        <p>The journey was tiring, but she rarely complained. She believed effort was something you
+        accepted, not something you argued with.</p>
+
+        <p>On her first day in the new class, she chose a seat quietly and settled in. A classmate told her she
+        couldn’t sit there because she had joined late.</p>
+
+        <p>Sahana nodded, picked up her bag, and moved.</p>
+
+        <p>She didn’t argue.</p>
+        <p>She didn’t explain.</p>
+        <p>She told herself it didn’t matter.</p>
+
+        <p>But it stayed with her longer than she admitted.</p>
+
+        <p>Classes moved on. Lectures blurred together. Concepts demanded more effort than they seemed
+        to demand from others. Sahana studied harder, revised more, and still felt like she was chasing
+        something that refused to stay.</p>
+
+        <p>Yet every morning, she showed up again.</p>
+        <p>She always did.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+        <hr style="margin:50px 0; border:none; border-top:1px solid #eee;">
+
+        <h2 class="chapter-title">CHAPTER 2 – PART II</h2>
+        <div class="chapter-subtitle">Quiet Struggles</div>
+
+        <p>College slowly taught Sahana that effort and results didn’t always move at the same speed.</p>
+
+        <p>She attended every class. She listened carefully. She wrote notes neatly, hoping that writing
+        things down would help things stay. But memory had never been kind to her. No matter how
+        much she revised, some concepts slipped away, especially the technical ones.</p>
+
+        <p>It frustrated her more than she admitted.</p>
+
+        <p>She didn’t lack interest.</p>
+        <p>She didn’t lack effort.</p>
+        <p>She lacked retention.</p>
+
+        <p>Before exams, she stayed up late, revising again and again, convincing herself that this time it
+        would be different. Sometimes it was. Often, it wasn’t.</p>
+
+        <p>What made it harder was this — she helped others.</p>
+
+        <p>She explained concepts patiently, breaking them down until they understood. She answered
+        doubts without hesitation. Watching their faces light up gave her a quiet satisfaction.</p>
+
+        <p>But when results came out, she often saw those same people score higher than her.</p>
+
+        <p>She smiled for them.</p>
+        <p>She congratulated them.</p>
+        <p>And then she went quiet.</p>
+
+        <p>She never resented them. But a familiar question returned again and again — why does it feel
+        harder for me?</p>
+
+        <p>Sahana didn’t talk about this much. When someone asked how she was managing, she said she
+        was fine. “Just busy,” she replied.</p>
+
+        <p>Busy became her shield.</p>
+
+        <p>Between classes, she existed on the edges of groups — present, but never fully settled. She
+        laughed when others laughed. She listened more than she spoke. She avoided drawing attention
+        to herself.</p>
+
+        <p>She didn’t want to disturb anyone.</p>
+        <p>She didn’t want to be a problem.</p>
+
+        <p>There were days when small comments stayed with her longer than they should have. A casual
+        remark. A joke that wasn’t meant to hurt. Others forgot them easily. She carried them home.</p>
+
+        <p>On the bus ride back, as the city lights blurred past the window, her thoughts grew heavier.</p>
+
+        <p>Sometimes she rested her head against the glass, exhausted — not just physically, but mentally.</p>
+
+        <p>Still, she found comfort in small things.</p>
+
+        <p>Drawing helped. Lines stayed where she placed them. Colors didn’t forget themselves. Cooking
+        helped too. When she cooked, people gathered. Compliments followed. For a while, she felt
+        seen.</p>
+
+        <p>These moments didn’t fix everything — but they helped her breathe.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=3) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+
+{% endblock %}

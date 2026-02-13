@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+{% set hearts = true %}
+
+{% block content %}
+
+<style>
+    .chapter-top-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 0;
+        margin-bottom: 20px;
+        z-index: 10;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .top-nav-btn {
+        margin-left: 10px;
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 8px 18px;
+        border-radius: 22px;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .top-nav-btn:hover {
+        background: #fff0f4;
+    }
+
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 35px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+</style>
+
+<!-- Sticky Previous -->
+<div class="chapter-top-nav">
+    <a href="{{ url_for('chapter_num', num=3) }}" class="top-nav-btn">← Previous Chapter</a>
+</div>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">CHAPTER 4 – PART I</h2>
+    <div class="chapter-subtitle">Eesha</div>
+
+    <div class="story-text">
+
+        <p>Eesha entered Sahana’s life quietly.</p>
+
+        <p>There was no dramatic beginning. No instant bond that demanded attention. She was simply
+        there — part of conversations, part of classrooms, part of everyday college life.</p>
+
+        <p>Eesha was kind. That was the first thing Sahana noticed.</p>
+
+        <p>Kind in a calm, uncomplicated way. She spoke softly, listened patiently, and treated everyone
+        with the same warmth. She didn’t create exclusivity. She didn’t withdraw either. She existed
+        comfortably among people, without needing to choose or be chosen.</p>
+
+        <p>Sahana admired that.</p>
+
+        <p>She admired how easily Eesha moved through friendships. How she laughed freely. How she
+        spoke to everyone without hesitation. How she never seemed unsure of her place.</p>
+
+        <p>At first, Sahana felt grateful to have someone like her around.</p>
+
+        <p>Their conversations began casually — about classes, assignments, small college complaints.
+        Eesha was easy to talk to. She responded kindly, without judgment, without probing too deeply.</p>
+
+        <p>That should have been enough.</p>
+
+        <p>But slowly, something shifted.</p>
+
+        <p>Sahana began looking forward to Eesha’s presence more than she expected. She noticed when
+        Eesha wasn’t around. She remembered small things Eesha said and replayed them later,
+        wondering if they meant as much to Eesha as they did to her.</p>
+
+        <p>She didn’t question it at first.</p>
+
+        <p>She told herself this was how friendships grew.</p>
+
+        <p>But without realizing it, expectations began to form.</p>
+
+        <p>Not spoken.</p>
+        <p>Not demanded.</p>
+        <p>Just felt.</p>
+
+        <p>Sahana wanted something she didn’t know how to ask for.</p>
+
+        <p>She wanted to feel important.</p>
+
+        <p>Not above others.</p>
+        <p>Just… chosen.</p>
+
+        <p>She noticed how Eesha treated everyone the same. How the same warmth was shared
+        everywhere. How stories Sahana thought were personal were told again to others.</p>
+
+        <p>That realization unsettled her.</p>
+
+        <p>Eesha wasn’t doing anything wrong.</p>
+        <p>She wasn’t unkind.</p>
+        <p>She wasn’t distant.</p>
+        <p>She was simply consistent.</p>
+
+        <p>And that consistency made Sahana feel invisible.</p>
+
+        <p>She didn’t understand why it bothered her so much. She tried to tell herself that this was
+        normal, that she was overthinking again.</p>
+
+        <p>But her heart didn’t quiet down.</p>
+
+        <p>She began waiting — for a sign, a gesture, a moment that would make her feel different from
+        the rest.</p>
+
+        <p>Eesha, unaware of this silent shift, remained the same.</p>
+
+        <p>And in that gap between who Eesha was and what Sahana hoped for, something fragile began
+        to form.</p>
+
+        <p>Expectation.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+        <hr style="margin:50px 0; border:none; border-top:1px solid #eee;">
+
+        <h2 class="chapter-title">CHAPTER 4 – PART II</h2>
+        <div class="chapter-subtitle">Expecting Without Asking</div>
+
+        <p>Sahana didn’t realize when admiration turned into expectation.</p>
+
+        <p>It happened quietly — the way most emotional shifts do.</p>
+
+        <p>She began noticing small things more than before. How Eesha reacted in group conversations.
+        Who she replied to first. Who she stood beside during disagreements.</p>
+
+        <p>One afternoon, a discussion in class turned tense.</p>
+
+        <p>“That’s not what I meant,” Sahana said, her voice low but steady.</p>
+
+        <p>Someone interrupted her.</p>
+
+        <p>Another laughed it off.</p>
+
+        <p>The conversation moved on too quickly.</p>
+
+        <p>Sahana didn’t argue.</p>
+        <p>She didn’t repeat herself.</p>
+
+        <p>She waited.</p>
+
+        <p>Not for the class —</p>
+        <p>for Eesha.</p>
+
+        <p>Eesha looked between both sides for a moment, then said softly,</p>
+
+        <p>“Let’s not make this a big issue.”</p>
+
+        <p>And just like that, it ended.</p>
+
+        <p>No one was wrong.</p>
+        <p>No one was right.</p>
+
+        <p>But something inside Sahana dropped.</p>
+
+        <p>When small arguments happened, Sahana found herself waiting.</p>
+
+        <p>Waiting for Eesha to speak.</p>
+        <p>Waiting for her to take a side.</p>
+        <p>Waiting for her to stand beside her — especially when Sahana knew she wasn’t wrong.</p>
+
+        <p>But Eesha didn’t.</p>
+
+        <p>She stayed neutral. She avoided conflict. She chose silence over involvement. Not out of
+        carelessness, but because that was who she was.</p>
+
+        <p>To Eesha, it was peace.</p>
+        <p>To Sahana, it felt like distance.</p>
+
+        <p>Whenever Sahana got upset, Eesha apologized. Even when she didn’t fully understand why
+        Sahana was hurt. Even when she hadn’t done anything wrong.</p>
+
+        <p>She lowered her self-respect quietly, hoping things would return to normal.</p>
+
+        <p>She went back every time.</p>
+
+        <p>Sahana noticed this — and instead of feeling reassured, she began expecting more.</p>
+
+        <p>If Eesha cared enough to apologize, shouldn’t she also defend her?</p>
+
+        <p>If Eesha stayed, shouldn’t she choose her sometimes?</p>
+
+        <p>Eesha, meanwhile, remained the same with everyone. The same kindness. The same patience.
+        The same openness.</p>
+
+        <p>There were no moments that felt exclusive to Sahana.</p>
+
+        <p>And that hurt more than she expected.</p>
+
+        <p>She didn’t hate Eesha.</p>
+        <p>She didn’t blame her.</p>
+
+        <p>She just wanted something Eesha never promised.</p>
+
+        <p>And because she never said this out loud, the expectations stayed hidden — growing heavier
+        with time.</p>
+
+        <p>This was the beginning of imbalance.</p>
+
+        <p>Not because someone was unkind —</p>
+        <p>but because expectations were placed where they didn’t belong.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=5) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+{% endblock %}

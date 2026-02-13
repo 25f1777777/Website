@@ -1,0 +1,332 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .chapter-top-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 0;
+        margin-bottom: 20px;
+        z-index: 10;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .top-nav-btn {
+        margin-left: 10px;
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 8px 18px;
+        border-radius: 22px;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .top-nav-btn:hover {
+        background: #fff0f4;
+    }
+
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 35px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+</style>
+
+<!-- Sticky Previous -->
+<div class="chapter-top-nav">
+    <a href="{{ url_for('chapter_num', num=5) }}" class="top-nav-btn">← Previous Chapter</a>
+</div>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">CHAPTER 6 – PART I</h2>
+    <div class="chapter-subtitle">The Pause She Never Took</div>
+
+    <div class="story-text">
+
+        <p>That question didn’t leave Sahana.</p>
+
+        <p>Why am I hurting myself like this?</p>
+
+        <p>It followed her into ordinary moments. During lectures. On bus rides. While brushing her teeth
+        before bed. It didn’t demand an answer — it simply stayed, waiting to be noticed.</p>
+
+        <p>One evening, she came home exhausted.</p>
+
+        <p>Her aunt placed a plate of food beside her without asking anything.</p>
+
+        <p>“You didn’t eat properly today,” she said casually, already turning away.</p>
+
+        <p>Sahana nodded.</p>
+
+        <p>Her phone buzzed.</p>
+
+        <p>A message she had been waiting for all day.</p>
+
+        <p>She looked at the screen.</p>
+
+        <p>Then at the plate.</p>
+
+        <p>For a moment, she didn’t pick up the phone.</p>
+
+        <p>Something inside her felt tired — not sad, not angry — just tired.</p>
+
+        <p>For the first time, she didn’t rush to silence her thoughts.</p>
+
+        <p>She paused.</p>
+
+        <p>And in that pause, she started seeing patterns she had ignored for a long time.</p>
+
+        <p>She noticed how her mood depended on certain people’s responses. How a single interaction
+        could decide whether her day felt light or heavy. How she waited — quietly, endlessly — for
+        reassurance she never asked for.</p>
+
+        <p>She began realizing something uncomfortable.</p>
+
+        <p>She wasn’t just overthinking situations.</p>
+
+        <p>She was building expectations around them.</p>
+
+        <p>Expectations she never spoke about.</p>
+
+        <p>Expectations others never agreed to.</p>
+
+        <p>This didn’t make her angry.</p>
+
+        <p>It made her tired.</p>
+
+        <p>She looked back at recent days and saw how much energy she had spent replaying conversations,
+        imagining different reactions, hoping for responses that never came. She saw how often she
+        ignored her own exhaustion just to hold on to emotional hope.</p>
+
+        <p>Hope that someone would notice.</p>
+
+        <p>Hope that someone would change.</p>
+
+        <p>And slowly, she questioned that hope.</p>
+
+        <p>Not with bitterness.</p>
+
+        <p>But with honesty.</p>
+
+        <p>She started asking herself small, quiet questions.</p>
+
+        <p>Did they promise me this?</p>
+
+        <p>Or did I expect it because I needed it?</p>
+
+        <p>The answers weren’t easy.</p>
+
+        <p>Some days, she slipped back into old habits. She still overthought. Still felt disappointed. Still
+        waited longer than she should have. Change didn’t arrive instantly.</p>
+
+        <p>But something had shifted.</p>
+
+        <p>She no longer blamed herself entirely.</p>
+
+        <p>And she no longer blamed others either.</p>
+
+        <p>She began understanding that pain doesn’t always come from cruelty. Sometimes, it comes
+        from expecting things from people who were never meant to give them.</p>
+
+        <p>This realization didn’t bring relief yet.</p>
+
+        <p>It brought clarity.</p>
+
+        <p>And clarity, she would soon learn, is often the most uncomfortable stage — because once you
+        see something clearly, you can’t unsee it.</p>
+
+        <p>Sahana wasn’t at peace yet.</p>
+
+        <p>But she had stopped running from the truth.</p>
+
+        <p>And that was the beginning.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+        <hr style="margin:50px 0; border:none; border-top:1px solid #eee;">
+
+        <h2 class="chapter-title">CHAPTER 6 – PART II</h2>
+        <div class="chapter-subtitle">Learning Where to Stop</div>
+
+        <p>Clarity changed the way Sahana looked at things.</p>
+
+        <p>Not immediately.</p>
+
+        <p>Not completely.</p>
+
+        <p>But enough to make her pause before reacting.</p>
+
+        <p>She started noticing how often she waited for certain people to make her feel okay. How she
+        gave their responses the power to decide her mood. How easily her peace slipped away when
+        expectations weren’t met.</p>
+
+        <p>This time, instead of blaming herself or feeling hurt, she tried something different.</p>
+
+        <p>She stepped back.</p>
+
+        <p>She didn’t cut people off.</p>
+
+        <p>She didn’t become cold.</p>
+
+        <p>She didn’t stop caring.</p>
+
+        <p>She simply stopped chasing explanations.</p>
+
+        <p>When someone stayed neutral, she reminded herself that neutrality wasn’t rejection. When
+        someone didn’t respond the way she hoped, she resisted the urge to fill the silence with
+        assumptions.</p>
+
+        <p>It wasn’t easy.</p>
+
+        <p>Some days, her old habits returned. She still felt disappointed. Still wished for reassurance.
+        Still wanted to feel chosen.</p>
+
+        <p>But now, she noticed those feelings without drowning in them.</p>
+
+        <p>She began setting quiet boundaries — not with others, but within herself.</p>
+
+        <p>She chose not to replay conversations endlessly.</p>
+
+        <p>She chose not to measure her worth through reactions.</p>
+
+        <p>She chose not to wait where she wasn’t invited.</p>
+
+        <p>Slowly, her attention shifted.</p>
+
+        <p>She noticed the love that didn’t confuse her.</p>
+
+        <p>Her aunt’s constant care.</p>
+
+        <p>Her best friend’s steady presence.</p>
+
+        <p>Her boyfriend’s patient support.</p>
+
+        <p>They didn’t make her anxious.</p>
+
+        <p>They didn’t make her overthink.</p>
+
+        <p>They simply stayed.</p>
+
+        <p>For the first time, Sahana allowed herself to value that kind of love — the kind that didn’t
+        require proof, explanations, or constant reassurance.</p>
+
+        <p>She realized something important.</p>
+
+        <p>Peace didn’t come from being chosen by everyone.</p>
+
+        <p>It came from choosing herself when expectations began to hurt.</p>
+
+        <p>This didn’t mean she stopped feeling.</p>
+
+        <p>She was still emotional.</p>
+
+        <p>Still sensitive.</p>
+
+        <p>Still caring.</p>
+
+        <p>But now, she was gentler with herself.</p>
+
+        <p>She learned that not every connection needed depth. Not every relationship needed emotional
+        investment. And not everyone was meant to meet her where she stood.</p>
+
+        <p>That understanding didn’t harden her heart.</p>
+
+        <p>It freed it.</p>
+
+        <p>Sahana wasn’t completely healed yet.</p>
+
+        <p>But she was no longer trapped in the same cycle.</p>
+
+        <p>And for the first time in a long while, her mind felt lighter — not because everything was
+        perfect, but because she finally knew where to stop.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=7) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+{% endblock %}

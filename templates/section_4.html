@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-body animate-in">
+    <div id="section4" class="section-container">
+        <h2 class="section-title">My Old Story: Roots of the Heart 🏠</h2>
+
+        <div class="memory-wall">
+            <div class="memory-card">
+                <div class="card-tag">School Days</div>
+                <p>Nenuu naa spoon thonee tinevaadini school lo even from 1st class only. Appudu school lo if i feel lonely, then carriage box pattukoni staff room loki velipoye vaadini bcs maa daddy aa school lo 6th to 10th maths cheptaru.</p>
+                <p>And alaa maa daddy tho kalisi tinevaadini.</p>
+            </div>
+
+            <div class="memory-card border-pink">
+                <p>After that i changed school bcs of one allegations... oka ammay emi chadavatlee, and maa daddy scolded her. That girl cried and complained to her parents (valla parents pedda rowdy and politician antaa). Aa sir ni teeseyandi ledaa school mooyinchestaa ani gola chesaru. Maa daddy ni teesesaru appudu.</p>
+                <p>Next yr i too changed school bcs maa daddy ki aa principal madam ki godava kudaa ayyindi.</p>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-tag">3rd Class</div>
+                <p>I just wanted to meet my mom daily during school. Lunch time lo no one is compatible with me. I just wanted to be only with my mom.</p>
+                <p>Kaavalaneee oka 4 days lunch motham intiki teskochee vaadini. My mom asked emaindi raa enduku tinatle anii. I said maa class lo evaru naaku nachalee lunch time lo, i want u during my lunch time anii.</p>
+                <p class="small-text">Andaruu LKG UKG vallu used to look at me and laugh. But nen em pattunchukolee, i just got what i wanted. I was happy then.</p>
+            </div>
+
+            <div class="memory-card highlighted">
+                <h3 class="memory-header">The Turning Point (UKG)</h3>
+                <p>Fees pending undedi and they sent me home. Full fees kattake allowed ani annaru. They sent aayamma with me to drop me at that house.</p>
+                <p>Aaa motham school ki she is the only maid. No one even respects her. I felt like, she is struggling too much. Maa parents ni antha laa struggle cheyyakudadu nenuu, i should study well anii.</p>
+                
+                <div class="emotional-moment">
+                    <p>I didn't want to add extra pain to her. I stopped her at the start of the street and said ekkada nunchi I'll go, u can go to school ani. She said jagratta and went off.</p>
+                </div>
+                
+                <p>I walked to my new house alone. My mom was shocked. Elaa raa ochavv, okkadini elaa pampaaru ani. That evening school vallu shock ayyaru when they realized i walked back alone. In few months, that school got banned too.</p>
+            </div>
+
+            <div class="journal-footer">
+                <p>"Aaa age lo antha aalochinchav ante nen nammanu anakuu... I respect elders a lot appatlo. And that too hardworking female elders antee inkaaanuuu."</p>
+            </div>
+        </div>
+
+        <div class="navigation-footer">
+            <a href="{{ url_for('section_show') }}" class="btn back-btn">← Back to Chapters</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .memory-wall {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .memory-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        position: relative;
+        border-left: 4px solid #ddd;
+    }
+
+    .border-pink { border-left-color: var(--pink-main); }
+
+    .card-tag {
+        font-size: 0.7rem;
+        background: #f0f0f0;
+        padding: 2px 8px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .memory-header {
+        color: var(--pink-dark);
+        margin-top: 0;
+        font-size: 1.1rem;
+    }
+
+    .highlighted {
+        background: #fff9fa;
+        border: 1px solid #ffe4e6;
+        border-left: 4px solid var(--pink-main);
+    }
+
+    .emotional-moment {
+        background: rgba(255, 77, 109, 0.05);
+        padding: 10px;
+        border-radius: 8px;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    .small-text {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .journal-footer {
+        text-align: center;
+        padding: 20px;
+        background: #2c3e50;
+        color: white;
+        border-radius: 12px;
+        font-style: italic;
+    }
+
+    .navigation-footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .back-btn {
+        background: white;
+        border: 2px solid var(--pink-main);
+        color: var(--pink-main) !important;
+    }
+
+    .back-btn:hover {
+        background: var(--pink-main);
+        color: white !important;
+    }
+
+    .animate-in {
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .chapter-top-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 0;
+        margin-bottom: 20px;
+        z-index: 10;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .top-nav-btn {
+        margin-left: 10px;
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        padding: 8px 18px;
+        border-radius: 22px;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .top-nav-btn:hover {
+        background: #fff0f4;
+    }
+
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #ffffff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 35px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    .chapter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #ff4d6d !important;
+        border: 1.5px solid #ff4d6d;
+        box-shadow: none;
+    }
+
+    .secondary-btn:hover {
+        background: #fff0f4;
+    }
+</style>
+
+<!-- Sticky Previous -->
+<div class="chapter-top-nav">
+    <a href="{{ url_for('chapter_num', num=6) }}" class="top-nav-btn">← Previous Chapter</a>
+</div>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">CHAPTER 7</h2>
+    <div class="chapter-subtitle">When Expectations Fell Silent</div>
+
+    <div class="story-text">
+
+        <p>The change didn’t arrive as a moment.</p>
+
+        <p>There was no argument.</p>
+
+        <p>No confrontation.</p>
+
+        <p>No dramatic ending.</p>
+
+        <p>It arrived quietly — the way most real changes do.</p>
+
+        <p>One evening, on her way back home, Sahana sat by the bus window, watching the city lights blur
+        past her. The bus was crowded, noisy, moving the same way it always did. But her mind felt
+        different.</p>
+
+        <p>Still.</p>
+
+        <p>For the first time in a long while, she wasn’t replaying conversations. She wasn’t waiting for a
+        reply. She wasn’t wondering how someone felt about her.</p>
+
+        <p>She was just there.</p>
+
+        <p>And in that stillness, something became clear.</p>
+
+        <p>She was tired of expecting.</p>
+
+        <p>Tired of hoping people would respond a certain way.</p>
+
+        <p>Tired of waiting to feel chosen.</p>
+
+        <p>Tired of giving her peace away so easily.</p>
+
+        <p>She thought about how much emotional energy she had invested in places that never promised
+        what she wanted. And without anger or blame, she finally understood something she had
+        avoided for a long time.</p>
+
+        <p>They hadn’t failed her.</p>
+
+        <p>She had placed expectations where there were no promises.</p>
+
+        <p>That realization didn’t break her.</p>
+
+        <p>It relieved her.</p>
+
+        <p>Her thoughts moved gently to the people who had always stayed — the ones whose care never
+        demanded explanation, whose presence never made her anxious, whose love never asked her
+        to prove herself.</p>
+
+        <p>She had mistaken intensity for importance.</p>
+
+        <p>She believed love had to disturb her peace to matter. That uncertainty meant depth. That
+        confusion meant connection.</p>
+
+        <p>But real love didn’t do that.</p>
+
+        <p>Real love felt steady.</p>
+
+        <p>It didn’t make her question herself.</p>
+
+        <p>It didn’t leave her restless.</p>
+
+        <p>That night, lying in bed, Sahana didn’t try to fix herself. She didn’t promise to change overnight.
+        She didn’t expect perfection.</p>
+
+        <p>She made one quiet decision.</p>
+
+        <p>She would stop expecting from people who never promised.</p>
+
+        <p>She would stop craving a specific kind of love.</p>
+
+        <p>She would start recognizing the love that already existed.</p>
+
+        <p>The days that followed weren’t perfect.</p>
+
+        <p>She still felt things deeply.</p>
+
+        <p>She still cared.</p>
+
+        <p>She still overthought sometimes.</p>
+
+        <p>But now, she noticed when expectations began to disturb her peace — and she chose to step
+        back.</p>
+
+        <p>She learned where to pause.</p>
+
+        <p>Where to let go.</p>
+
+        <p>Where to stop waiting.</p>
+
+        <p>And slowly, without forcing it, her peace returned.</p>
+
+        <p>Not because people changed —</p>
+
+        <p>but because she did.</p>
+
+        <p>Sahana didn’t stop loving.</p>
+
+        <p>She simply learned where to place her love.</p>
+
+        <p>And that made all the difference.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">End.</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+<!-- Bottom Navigation -->
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=7) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=8) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+{% endblock %}

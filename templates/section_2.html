@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-body animate-in">
+    <div id="section2" class="section-container">
+        <h2 class="section-title">A Chinni Story 👧💖</h2>
+
+        <div class="story-wrapper">
+            <div class="story-content">
+                <p class="story-intro">Let me tell a small story.</p>
+                <p>It's a story of small, potti, cute chinni girl.</p>
+                <p>There used to be a girl, with childish behavior, with innocent mind, sensitive heart ❤️.</p>
+                <p>She used to believe everyone blindly and they hurt her later 😔.</p>
+                <p>She used to share her all details to a boy. She used to give light ⚡ quick replies. She used to talk to him daily.</p>
+                
+                <p>He, who was fed up with life and people, wanted to just spend some time and complete his B.Tech.</p>
+                <p>Whenever he talks to her, he felt happy, and felt for the first time, how it feels when care comes from others. He felt very happy, but, with the recent experience then, he thought not to talk with anyone.</p>
+                <p>He used to tell this to his mind, but, he used to change his mind within fraction of seconds 🤗.</p>
+
+                <div class="story-card">
+                    <h3>The Boy's Checklist for a Wife:</h3>
+                    <ul class="checklist">
+                        <li><span class="check">✔</span> My girl should feel comfortable with me, if she feels my behaviour is wrong, she should be the one to correct me.</li>
+                        <li><span class="check">✔</span> My girl shouldn't hide anything from me. (not because of insecurities but he wanted to be the universe for her).</li>
+                        <li><span class="check">✔</span> My girl shouldn't need help from anyothers (ofc, it seems too much, but he used to dream like that).</li>
+                        <li><span class="check">✔</span> My girl shouldn't lie to me (small lies are okay).</li>
+                    </ul>
+                </div>
+
+                <p>This small potti girl, started checking these tickboxes one by one.</p>
+                <p>She said about her school, and B.Tech clg, and also about her boy bestie. She used to approach this boy first for any kind of help needed.</p>
+                <p>The boy used to help her in many ways and tried to find ways to talk with her. He used to find time to be spent with her even during his busy schedule.</p>
+                
+                <p>He may feel somewhat insecure about her bestie but, still he's happy with her. Slowly, they both proposed (as they fell in love long ago). They met, they spoke, they ate, etc.</p>
+                <p>The cute 😍 smile of that girl while being captured in camera while eating is still alive in the boy's heart and mind. The hard pinch given by the girl is still being felt by the boy, not only by his body, but also by his heart 💓.</p>
+
+                <p>They enjoyed, they fought, they suffered, but never left. They met each other daily in the valentine week, even meet is not possible for the boy. They both used to come in each other's dream as well.</p>
+
+                <div class="pause-box">
+                    <p>The girl asked the boy, she can't focus on studies as she is talking the whole day with him. The boy agreed with it. She started chatting with him for a less time daily, and she was hurt a lot (but never shared with him), and she wanted a pause ⏸️ up on 30th Nov 2025.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <h4>Their relationship lasted for:</h4>
+                    <div class="time-grid">
+                        <div class="time-item"><strong>46</strong><span>weeks</span></div>
+                        <div class="time-item"><strong>324</strong><span>days</span></div>
+                        <div class="time-item"><strong>7728</strong><span>hours</span></div>
+                    </div>
+                    <p class="time-detail">4,63,680 minutes | 2,78,20,800 seconds</p>
+                </div>
+
+                <p>The boy is missing each and every second he spend with her. He begged her, daily, even through his exams, and, the girl agreed to talk.</p>
+                
+                <div class="anniversary-box">
+                    <p>Now, this has been exactly an year, since she said i love you to him</p>
+                    <p class="date-highlight">📅 2025 Jan 11, 3:30 PM</p>
+                    <p class="iitm-note">It was his second day after joining in IITM.</p>
+                </div>
+
+                <p>The boy is in a dilemma, whether to treat it as a happy moment or a sad moment. (as birthday of heavenly people is considered as sad day).</p>
+                
+                <p class="final-ask">Now, the girl in the story is the girl who was reading this. I'm asking you, tell me, what this day should be to him?</p>
+                
+                <p class="story-footer">Yeahh it's not a cinematic love story, but, it's a story of two genuine people.</p>
+            </div>
+        </div>
+
+        <div class="navigation-footer">
+            <a href="{{ url_for('section_show') }}" class="btn back-btn">← Back to Chapters</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .story-wrapper {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: inset 0 0 15px rgba(0,0,0,0.02);
+    }
+
+    .story-content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #444;
+        font-size: 1.05rem;
+    }
+
+    .story-intro { font-weight: bold; color: var(--pink-dark); }
+
+    .story-card {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        margin: 20px 0;
+        border-left: 5px solid var(--pink-main);
+    }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { margin-bottom: 10px; font-size: 0.95rem; display: flex; gap: 10px; }
+    .check { color: var(--pink-main); font-weight: bold; }
+
+    .pause-box {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 15px;
+        border-radius: 12px;
+        font-style: italic;
+    }
+
+    .timeline-card {
+        background: var(--pink-main);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .time-grid { display: flex; justify-content: space-around; margin: 15px 0; }
+    .time-item strong { display: block; font-size: 1.5rem; }
+    .time-item span { font-size: 0.8rem; text-transform: uppercase; }
+    .time-detail { font-size: 0.85rem !important; opacity: 0.9; margin: 0 !important; }
+
+    .anniversary-box {
+        text-align: center;
+        padding: 20px;
+        border: 2px dashed var(--pink-main);
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .date-highlight { font-size: 1.3rem !important; font-weight: 800; color: var(--pink-dark); margin: 5px 0 !important; }
+    .iitm-note { font-size: 0.9rem !important; color: #777; }
+
+    .final-ask {
+        font-weight: 800;
+        color: var(--pink-dark);
+        text-align: center;
+        font-size: 1.2rem !important;
+        margin: 30px 0 !important;
+    }
+
+    .story-footer {
+        text-align: center;
+        font-style: italic;
+        opacity: 0.8;
+    }
+
+    .navigation-footer { margin-top: 30px; text-align: center; }
+    .back-btn { background: white; border: 2px solid var(--pink-main); color: var(--pink-main) !important; }
+    .back-btn:hover { background: var(--pink-main); color: white !important; }
+
+    .animate-in { animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+{% endblock %}

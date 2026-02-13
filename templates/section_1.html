@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-body animate-in">
+    <div id="section1" class="section-container">
+        <h2 class="section-title">You Are The One 💖</h2>
+
+        <div class="love-lines-container">
+            <div class="love-lines">
+                <p><span>You are the one</span>, Whom I met this year and became this close !!</p>
+                <p><span>You are the one</span>, who actually changed my life</p>
+                <p><span>You are the one</span>, who stood beside me in many times</p>
+                <p><span>You are the one</span>, who corrected me when I am wrong</p>
+                <p><span>You are the one</span>, who consolidated when I'm</p>
+                <p><span>You are the one</span>, for whom I cried a lot</p>
+                <p><span>You are the one</span>, for whom I felt happy a lot</p>
+                <p><span>You are the one</span>, for having whom, I tried to change myself a lot</p>
+                <p><span>You are the one</span>, who actually changed my mind</p>
+                <p><span>You are the one</span>, with whom I fought a lot</p>
+                <p><span>You are the one</span>, on whom I feel so much possessive</p>
+                <p><span>You are the one</span>, who stayed with me even after many fights</p>
+                <p><span>You are the one</span>, who stood beside me always in this year</p>
+                <p><span>You are the one</span>, whom I gave sky high priority</p>
+                <p><span>You are the one</span>, who made me cry but later made me feel happy too</p>
+                <p><span>You are the one</span>, who shares most of things with me too as with someother</p>
+                <p><span>You are the one</span>, with whom I share my things</p>
+                <p><span>You are the one</span>, whom I feel as a genuine person</p>
+                <p><span>You are the one</span>, who is more than everything for an average person like me</p>
+                <p><span>You are the one</span>, with whom, talking and spending time gave me happiness</p>
+                <p><span>You are the one</span>, with whom, talking gave me a bit of fear of losing u sometimes</p>
+                <p><span>You are the one</span>, for whom I have written this by my own without any tools ( loops )</p>
+                <p><span>You are the one</span>, I have hurt a lot but</p>
+                <p><span>You are the one</span>, who respect my feelings and stayed with me</p>
+                <p><span>You are the one</span>, with whom, talking doesn't give me a doubt of whether you may feel bad</p>
+                <p><span>You are the one</span>, with whom, talking is something like talking to myself</p>
+                <p><span>You are the one</span>, with whom I feel that free</p>
+                <p><span>You are the one</span>, because of whom my mood swinged regularly</p>
+                <p><span>You are the one</span>, who changed my mood regularly because of me</p>
+                <p><span>You are the one</span>, who cried for me</p>
+                <p><span>You are the one</span>, about whom I think a lot</p>
+                <p><span>You are the one</span>, with whom I speak a lot</p>
+                <p><span>You are the one</span>, who may not do the same with me but still I do the same</p>
+                <p><span>You are the one</span>, for whom I left many things</p>
+                <p><span>You are the one</span>, who break my heart but still I do talk with</p>
+                <p><span>You are the one</span>, for whom I lost my sleep and mind many times</p>
+                <p><span>You are the one</span>, who came in my dreams many times</p>
+                <p><span>You are the one</span>, with whom I am affectionated a lot even when I am just a friend from your side</p>
+                <p><span>You are the one</span>, you are my dream girl</p>
+            </div>
+        </div>
+
+        <div class="navigation-footer">
+            <a href="{{ url_for('section_show') }}" class="btn back-btn">← Back to Chapters</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .section-container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .section-title {
+        color: var(--pink-main);
+        font-weight: 800;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .love-lines-container {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .love-lines p {
+        margin: 12px 0;
+        line-height: 1.5;
+        font-size: 1.05rem;
+        color: #444;
+        border-bottom: 1px solid rgba(255, 77, 109, 0.1);
+        padding-bottom: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .love-lines p:hover {
+        transform: translateX(5px);
+        color: #000;
+    }
+
+    .love-lines p span {
+        color: var(--pink-main);
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    .navigation-footer {
+        margin-top: 30px;
+    }
+
+    .back-btn {
+        background: transparent;
+        border: 2px solid var(--pink-main);
+        color: var(--pink-main) !important;
+        font-weight: bold;
+    }
+
+    .back-btn:hover {
+        background: var(--pink-main);
+        color: white !important;
+    }
+
+    /* Animation for the whole section */
+    .animate-in {
+        animation: fadeInBlur 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInBlur {
+        from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+        to { opacity: 1; filter: blur(0); transform: translateY(0); }
+    }
+</style>
+{% endblock %}

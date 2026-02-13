@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content-body animate-in">
+
+    <a href="{{ url_for('logout') }}" style="float:right; font-size:0.8rem; color:#999;">
+        Logout & Lock
+    </a>
+
+    <h2>When Expectations Fell Silent</h2>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Chapter</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>The Way Sahana Loved</td>
+            <td><a href="{{ url_for('chapter_num', num=1) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>The Long Road Forward</td>
+            <td><a href="{{ url_for('chapter_num', num=2) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Love That Was Already There</td>
+            <td><a href="{{ url_for('chapter_num', num=3) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Eesha</td>
+            <td><a href="{{ url_for('chapter_num', num=4) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>When Thoughts Became Louder</td>
+            <td><a href="{{ url_for('chapter_num', num=5) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>The Pause She Never Took</td>
+            <td><a href="{{ url_for('chapter_num', num=6) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>When Expectations Fell Silent</td>
+            <td><a href="{{ url_for('chapter_num', num=7) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Something Meant Just for You</td>
+            <td><a href="{{ url_for('chapter_num', num=8) }}" class="lovable-btn">Open ❤️</a></td>
+        </tr>
+    </table>
+
+    <div class="navigation-footer">
+        <a href="{{ url_for('section_show') }}" class="lovable-btn">
+            ← Back to Chapters
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

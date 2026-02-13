@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="{{ url_for('logout') }}" style="color: grey; font-size: 0.8rem;">Logout & Lock</a>
+
+<h2>Chapters of Us</h2>
+<table>
+    <tr><th>#</th><th>Section</th><th>Action</th></tr>
+    <tr><td>1</td><td>You Are The One</td><td><a href="{{ url_for('get_section', id=1) }}" class="lovable-btn">Open ❤️</a></td></tr>
+    <tr><td>2</td><td>A Chinni Story</td><td><a href="{{ url_for('get_section', id=2) }}" class="lovable-btn">Open ❤️</a></td></tr>
+    <tr><td>3</td><td>Why you ?? </td><td><a href="{{ url_for('get_section', id=3) }}" class="lovable-btn">Open ❤️</a></td></tr>
+    <tr><td>4</td><td>My transformation </td><td><a href="{{ url_for('get_section', id=4) }}" class="lovable-btn">Open ❤️</a></td></tr>
+    <tr><td>5</td><td>Study tips for you </td><td><a href="{{ url_for('get_section', id=5) }}" class="lovable-btn">Open ❤️</a></td></tr>
+    <tr><td>6</td><td>Your Story written by you </td><td><a href="{{ url_for('get_section', id=6) }}" class="lovable-btn">Open ❤️</a></td></tr>
+</table>
+{% endblock %}

@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        overflow-y: auto !important; /* Allow scrolling for long text */
+        height: auto;
+    }
+
+    .letter-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background: white;
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        position: relative;
+        line-height: 1.8;
+        color: #444;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        animation: slideUp 0.8s ease-out;
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .letter-header {
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 2px dashed var(--pink-bg);
+        padding-bottom: 20px;
+    }
+
+    .letter-header h2 {
+        color: var(--pink-main);
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .content-para {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        white-space: pre-line; /* Keeps your original line breaks */
+    }
+
+    .highlight {
+        color: var(--pink-main);
+        font-weight: 600;
+    }
+
+    .quote-box {
+        background: var(--pink-bg);
+        padding: 20px;
+        border-left: 5px solid var(--pink-main);
+        border-radius: 10px;
+        font-style: italic;
+        margin: 30px 0;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .footer-actions {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+    }
+
+    /* Lovable Back Button */
+    .back-btn {
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px 30px;
+        background: #444;
+        color: white !important;
+        border-radius: 50px;
+        transition: all 0.3s;
+        font-weight: 600;
+    }
+
+    .back-btn:hover {
+        background: var(--pink-main);
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+    }
+
+    .eno-badge {
+        display: inline-block;
+        background: #e1f5fe;
+        color: #0288d1;
+        padding: 2px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+</style>
+
+<div class="letter-container">
+    <div class="letter-header">
+        <h2>A few tips for You ❤️</h2>
+        <p style="color: #888;">Take your time to read this...</p>
+    </div>
+
+    <div class="content-para">
+        <strong>Context : </strong>
+        <em> Sent u while solving Aptitude questions , Time and work........ </em>
+
+        Adanthaaa choodalaaa anii chiraku padaku. No need to see at the concepts.
+        
+        But just have a look at questions and think in ur mind, elaa cheste ostadaa anii. If u have a doubt, or feel like u r seeing this kind of question for first time, then try doing it. Everytime no need to have pen and paper, but <span class="highlight">use ur phone as a book</span> and make use of it.
+        
+        If u think, ee kind of question already chesam or edii almost same laane undi with small difference, edoo oka small step or number maariste chaalu (just like how u caught about the divide work by C as he is available only once for 3 days, and later on it's normal problem), alantivi just catch the logic and skip that question.
+    </div>
+
+    <div class="content-para">
+        Entha process enduku raaa ani adagakuu, it's simple bcs, it is a way of training you to competitive exams. Eppudaina choodu baaga chadivevallu question choosi edii raadu ani annaru antee, adii pedda rod question or still more anii.
+        
+        Bcs they get acquainted by looking at various questions and identifying the difficulty of the question. Exam lo niku kanipichee anni questions cheskuntuu untaa ante pani avvadu assalu. <span class="highlight">U need to know how to pick the easy questions.</span> And aaa picking process ravali ante, u need practise a lot.
+    </div>
+
+    <div class="content-para">
+        Practise doesn't mean that pen paper pattukoni కవితలు raayadam (where brain doesn't work for that question), but it actually means that, facing more number of questions, getting familiarised with more variability of asking questions.
+        
+        And nuv 100 questions solve cheyyu. If u didn't find a pattern, then exam lo hole eee. I have seen many people, like dattatreya, u and few more. They work hard, for a more time, but exam lo anni marchipotam or time saripoledu these kind of reasons estaruu.
+    </div>
+
+    <div class="content-para">
+        Here I'm not judging you, but marchipotunnav antee, these mathematical or physics stuff, u haven't learnt them in correct way at ur foundation ani, i know mana clg alaa undii, we can't do anything. And time saripolee antee, it could be bcs of main reason is, u have spent more time on difficult questions which is not needed to be solved. Again deeni gurinchi inko roju manchigaa discuss cheddam.
+    </div>
+
+    <div class="content-para">
+        Be free to skip the question if u feel it u don't know it. If u feel it's lengthy but easy, then mark for review.
+    </div>
+
+    <div class="quote-box">
+        "Suno sabki, karo manki"<br>
+        <span style="font-size: 0.9rem; font-weight: normal;">(Listen to all, but do what you feel is best)</span>
+    </div>
+
+    <div class="content-para">
+        Okatee cheppali anukuntunnaa. Just skim through the pdf I'll be providing you now. I created some 16 page pdf to avoid trouble for you.
+        
+        Sorry entha long message pettaa anii. Please read patiently. I know u will read it patiently. But, clg ki late avtondi ante kangaaru lo don't read these ok naa. These should be remembered by you. Understand by you. Digest by you.
+        
+        <span class="highlight">Digest kaakapote I'll buy eno</span> 
+    </div>
+
+    <div class="content-para" style="background: #fff5f7; padding: 20px; border-radius: 15px;">
+        And nen okateee cheptaaa. Please don't feel guilt that u r not dng anything to me anii. Ok naaa? I will be very happy if u r happy. I will be super happy if u r very happy. I will be super duper happy if u r super happy. Ok naaaa papaaaaaaaq.
+        
+        Deserving kaaduu nuv naaku ani guilty feeling ostondi alaa assalu feel kaaakuuu papaaa. Naaku unnantha overthinking, naaa past kii, i don't even deserve u. But I'm putting my efforts. I'm improving myself. I'm moulding myself compatible with u.
+    </div>
+
+    <div class="content-para">
+        Best example is physics sir, see sir pen paper or board meeda question solving ni assalu ishta padaru, bcs alaa cheste 1hr lo 15 avtay for suppose. Adee brain lonee cheste adee 1 hr lo 25 avtayy.
+        
+        I agree, sir expert, and sir maatladevi class lo evariki ardam kaadu except me. Andari kanna ekkuva advice echindi to dattatreya eee, and i said one thing, nuv hard work chestunnav, try doing smart work too. But I'm elaborating u this much even when my eyes are closing bcs of sleep.
+    </div>
+
+    <div class="footer-actions">
+        <p style="font-style: italic; margin-bottom: 20px;">My autotype corrected me in most of the words because of my big heart (and sleepiness) ❤️</p>
+        <a href="{{ url_for('section_show') }}" class="back-btn">← Back to Table</a>
+    </div>
+</div>
+{% endblock %}

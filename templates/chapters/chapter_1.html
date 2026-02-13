@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% set hearts = true %}
+
+{% block content %}
+
+<style>
+    .chapter-title {
+        text-align: center;
+        color: #ff4d6d;
+        margin-bottom: 5px;
+    }
+
+    .chapter-subtitle {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: #444;
+        letter-spacing: 0.2px;
+    }
+
+    .story-text p {
+        margin-bottom: 18px;
+    }
+
+    .soft-divider {
+        text-align: center;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+        margin: 30px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    .chapter-card {
+        background: linear-gradient(180deg, #fff, #fff8fa);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255, 77, 109, 0.08);
+    }
+</style>
+
+<div class="chapter-card">
+
+    <h2 class="chapter-title">Chapter 1 – PART I</h2>
+    <div class="chapter-subtitle">The Way Sahana Loved</div>
+
+    <div class="story-text">
+
+        <p>Sahana had always felt things more deeply than the people around her.</p>
+        <p>She noticed pauses in conversations.</p>
+        <p>Changes in tone.</p>
+        <p>The difference between a reply that came instantly and one that came hours later.</p>
+        <p>These details stayed with her long after others forgot them.</p>
+
+        <p>People often called her emotional. She never argued with that. She knew she felt more — and
+        she had learned to live with it.</p>
+
+        <p>Sahana cared easily. When she liked someone, she remembered small details about them. When
+        someone shared a problem, she carried it with her even after the conversation ended. Love, to
+        her, was something you showed, not something you guarded.</p>
+
+        <p>And because she loved deeply, she expected deeply too.</p>
+        <p>Not in a demanding way.</p>
+        <p>Not with words.</p>
+        <p>But quietly.</p>
+
+        <p>She expected people to notice her effort the way she noticed theirs. She expected understanding
+        without having to ask for it. When those expectations weren’t met, she didn’t confront anyone.
+        She adjusted herself instead.</p>
+
+        <p>Adjustment came naturally to her.</p>
+
+        <p>Silence felt safer than conflict. Overthinking felt easier than asking direct questions. She often
+        chose to carry her hurt quietly rather than disturb the peace around her.</p>
+
+        <p>At night, when the world slowed down, her mind didn’t.</p>
+
+        <p>Conversations replayed themselves. Words took on new meanings. She wondered if she had
+        misunderstood closeness, if she had imagined importance where there was none.</p>
+
+        <p>Still, she believed in goodness.</p>
+        <p>She believed kindness mattered.</p>
+        <p>She believed effort mattered.</p>
+        <p>She believed love always meant something.</p>
+
+        <p>What she didn’t know yet was that loving without boundaries could slowly disturb her peace.</p>
+
+        <p>For now, Sahana continued the only way she knew how —<br>
+        with an open heart, quiet expectations, and a belief that love would eventually understand her.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+        <hr style="margin:50px 0; border:none; border-top:1px solid #eee;">
+
+        <h2 class="chapter-title">Chapter 1 – PART II</h2>
+        <div class="chapter-subtitle">Learning to Adjust</div>
+
+        <p>Sahana didn’t learn to expect too much overnight.</p>
+
+        <p>It happened slowly — through moments that seemed small, almost harmless.</p>
+
+        <p>When someone interrupted her, she let them finish.</p>
+        <p>When someone misunderstood her, she explained gently.</p>
+        <p>When someone forgot her effort, she reminded herself that not everyone notices things the way
+        she does.</p>
+
+        <p>She became good at adjusting.</p>
+
+        <p>Too good.</p>
+
+        <p>If someone was upset, she apologized first — even when she wasn’t sure what she had done
+        wrong. If someone pulled away, she assumed she needed to try harder. Somewhere along the
+        way, she began to believe that love meant responsibility.</p>
+
+        <p>That caring for someone meant protecting their comfort, even at the cost of her own.</p>
+
+        <p>She rarely asked for reassurance. Instead, she waited for it. She believed that if she truly
+        mattered, people would notice on their own.</p>
+
+        <p>When they didn’t, she didn’t complain.</p>
+
+        <p>She questioned herself instead.</p>
+
+        <p>Maybe she was expecting too much.</p>
+        <p>Maybe she was being sensitive.</p>
+        <p>Maybe she needed to be quieter, calmer, easier to be around.</p>
+
+        <p>So she became that.</p>
+
+        <p>She learned to stay silent during misunderstandings. She learned to smile through
+        disappointment. She learned to convince herself that being needed was the same as being valued.</p>
+
+        <p>But deep inside, something always felt incomplete.</p>
+
+        <p>She wanted to feel important without asking.</p>
+        <p>She wanted to feel chosen without explaining.</p>
+
+        <p>And because she never said these things out loud, her expectations stayed invisible — even to
+        herself.</p>
+
+        <p>This wasn’t something she recognized as a problem yet.</p>
+
+        <p>It was just the way she had learned to love.</p>
+
+        <p>Quietly.</p>
+        <p>Carefully.</p>
+        <p>And always a little too much.</p>
+
+        <div class="soft-divider">✦ ✦ ✦</div>
+
+        <p style="text-align:center;">To be continued…</p>
+
+        <div class="footer-note">
+            This is a fictional story. All characters and events are fictional. All rights reserved.
+        </div>
+
+    </div>
+</div>
+
+
+<div class="navigation-footer chapter-nav">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
+        ← Back to Sections
+    </a>
+
+    <a href="{{ url_for('chapter_num', num=2) }}" class="lovable-btn">
+        Next Chapter →
+    </a>
+</div>
+
+
+{% endblock %}

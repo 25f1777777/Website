@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Dating a Man in Tech ❤️</title>
+    <style>
+        :root {
+            --pink-main: #d63384;
+            --pink-bg: #fef1f2;
+            --code-bg: #2d3436;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--pink-bg) 0%, #ffdde1 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 650px;
+            z-index: 10;
+        }
+
+        h1 {
+            color: var(--pink-main);
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .code-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            text-align: left;
+            max-width: 500px;
+            margin: 20px auto;
+            border: 1px solid #333;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .red {
+            background: #ff5f56;
+        }
+
+        .yellow {
+            background: #ffbd2e;
+        }
+
+        .green {
+            background: #27c93f;
+        }
+
+        .file-name {
+            color: #888;
+            font-size: 12px;
+            font-family: sans-serif;
+        }
+
+        pre {
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d4d4d4;
+        }
+
+        .py-kw {
+            color: #c586c0;
+            font-weight: bold;
+        }
+
+        .py-func {
+            color: #dcdcaa;
+        }
+
+        .py-str {
+            color: #ce9178;
+        }
+
+        .py-var {
+            color: #9cdcfe;
+        }
+
+        .py-comment {
+            color: #6a9955;
+        }
+
+        .py-num {
+            color: #b5cea8;
+        }
+
+        .btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            min-height: 60px;
+        }
+
+        .btn {
+            padding: 16px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        #yesBtn {
+            background: var(--pink-main);
+            color: white;
+            box-shadow: 0 10px 20px rgba(214, 51, 132, 0.2);
+        }
+
+        #noBtn {
+            background: #ffffff;
+            color: #d63384;
+            border: 2px solid var(--pink-main);
+            position: absolute;
+            z-index: 999;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .success-box {
+            background: white;
+            padding: 50px;
+            border-radius: 35px;
+            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1);
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .heart-particle {
+            position: fixed;
+            pointer-events: none;
+            animation: floatUp 4s ease-out forwards;
+            z-index: 100;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* ===== NEW STYLES ===== */
+        .table-box {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .link-btn {
+            background: var(--pink-main);
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1);
+        }
+
+        /* ===== SECTION 1 SPECIAL STYLING ===== */
+        .love-lines {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .love-lines p {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 4px solid var(--pink-main);
+            animation: fadeInUp 0.6s ease both;
+        }
+
+        .love-lines p span {
+            color: var(--pink-main);
+            font-weight: 600;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.85);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+         .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            z-index: 5;
+        }
+
+        .table-box {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .heart-particle {
+            position: fixed;
+            pointer-events: none;
+            animation: floatUp 4s ease-out forwards;
+            z-index: 1;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .final-question {
+            color: var(--pink-main);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper" class="container">
+        <div id="mainContent">
+            <h1>Dating a Man in Tech ❤️</h1>
+            <p class="subtitle">"My heart has no bugs, just features for you."</p>
+
+            <p class="subtitle">"Will you be my valentine ? "</p>
+
+            <div class="code-card">
+                <div class="code-header">
+                    <div class="dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="file-name">propose.py</span>
+                </div>
+                <pre>
+<span class="py-kw">while</span> <span class="py-var">life</span> <span class="py-kw">is</span> <span class="py-kw">True</span>:
+    <span class="py-func">print</span>(<span class="py-str">"I love you"</span>)
+
+    <span class="py-kw">if</span> <span class="py-var">you</span> == <span class="py-var">mine</span>:
+        <span class="py-var">happiness</span> += <span class="py-func">float</span>(<span class="py-str">'inf'</span>) <span class="py-comment"># Infinite happiness!</span>
+        <span class="py-var">sadness</span> += <span class="py-num">10</span> <span class="py-comment"># To balance the universe</span>
+        <span class="py-var">forever</span> = <span class="py-kw">True</span>
+    </pre>
+            </div>
+            <div class="btn-group">
+                <button id="yesBtn" class="btn" onclick="location.href='{{ url_for('click_yes') }}'">Yes! 💍</button>
+                <button id="noBtn" class="btn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+        </div>
+
+    
+
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 50);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 50);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+
+        function celebrate() {
+            document.getElementById('mainContent').classList.add('hidden');
+            document.getElementById('successBox').classList.remove('hidden');
+
+            if (!document.getElementById('viewMoreBtn')) {
+                const btn = document.createElement('button');
+                btn.id = 'viewMoreBtn';
+                btn.className = 'btn';
+                btn.textContent = 'Click this to view more';
+                btn.style.marginTop = '20px';
+                btn.onclick = passwordFlow;
+                document.getElementById('successBox').insertBefore(btn, document.getElementById('successBox').lastElementChild);
+            }
+
+            for (let i = 0; i < 30; i++) {
+                setTimeout(createHeart, i * 150);
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart-particle';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        window.onload = () => {
+            const rect = noBtn.getBoundingClientRect();
+            noBtn.style.left = rect.left + 'px';
+            noBtn.style.top = rect.top + 'px';
+        };
+        // Example: triggered after password check or clicking yes
+function unlockSection3() {
+    document.querySelector('.section3').style.display = 'block';
+}
+
+        /* ===== NEW LOGIC ===== */
+
+        const SECRET_PASSWORD = "iloveyou";
+
+        function passwordFlow() {
+            const input = prompt("Enter password:");
+            if (input !== SECRET_PASSWORD) {
+                alert("Wrong password ❌");
+                return;
+            }
+            document.getElementById('successBox').classList.add('hidden');
+            document.getElementById('tableView').classList.remove('hidden');
+        }
+
+        function openSection(num) {
+            document.getElementById('tableView').classList.add('hidden');
+            document.getElementById('section' + num).classList.remove('hidden');
+        }
+
+        function backToTable() {
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('section' + i).classList.add('hidden');
+            }
+            document.getElementById('tableView').classList.remove('hidden');
+        }
+
+        let sectionHeartInterval = null;
+
+        function startSectionHearts() {
+            stopSectionHearts();
+            sectionHeartInterval = setInterval(createHeart, 600);
+        }
+
+        function stopSectionHearts() {
+            if (sectionHeartInterval) {
+                clearInterval(sectionHeartInterval);
+                sectionHeartInterval = null;
+            }
+        }
+
+        const originalOpenSection = openSection;
+        openSection = function (num) {
+            document.body.style.overflow = 'auto';
+            originalOpenSection(num);
+            startSectionHearts();
+        };
+
+        // Disable scrolling + hearts when going back
+        const originalBackToTable = backToTable;
+        backToTable = function () {
+            document.body.style.overflow = 'hidden';
+            originalBackToTable();
+            stopSectionHearts();
+        };
+
+    </script>
+</body>
+
+</html>
