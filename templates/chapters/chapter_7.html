@@ -216,13 +216,18 @@
 </div>
 <!-- Bottom Navigation -->
 <div class="navigation-footer chapter-nav">
-    <a href="{{ url_for('get_section', id=7) }}" class="lovable-btn secondary-btn">
+    <a href="{{ url_for('get_section', id=6) }}" class="lovable-btn secondary-btn">
         ← Back to Sections
     </a>
 
-    <a href="{{ url_for('chapter_num', num=8) }}" class="lovable-btn">
-        Next Chapter →
+    <a href="{{ url_for('section_show') }}" class="lovable-btn">
+        Back to Chapters →
     </a>
 </div>
+
+<a href="{{ url_for('chapter_num', num=8) }}" class="lovable-btn">
+    Final Note →
+</a>
+
 
 {% endblock %}
